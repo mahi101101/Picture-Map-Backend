@@ -9,9 +9,7 @@ async function getCoordsForAddress(address) {
       address
     )}&key=${KEY}`
   );
-
   const data = responce.data;
-
   if (!data || data.status === "ZERO_RESULTS") {
     const error = new HttpError("Location cannot be identified", 422);
     throw error;
