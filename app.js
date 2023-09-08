@@ -15,7 +15,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: ["http://localhost:3000", "https://backend-picture-map-dbda1857f09c.herokuapp.com/"],
+  origin: '*',
   methods: "GET,PATCH,POST,DELETE",
   credentials: true,
   optionsSuccessStatus: 204,
