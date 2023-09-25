@@ -1,5 +1,3 @@
-const axios = require("axios");
-
 const KEY = `${process.env.GOOGLE_API_KEY}`;
 
 const captureMap = async (coordinates) => {

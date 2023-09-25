@@ -11,7 +11,7 @@ module.exports = (req, res, next) => {
     const token = req.headers.authorization.split(" ")[1]; // Authorization: 'Bearer TOKEN'
 
     if (!token) {
-      throw new Error("Authentication failed!");
+      throw new Error("Authentication failed no token!");
     }
     const decodedToken = jwt.verify(token, jwt_key);
 

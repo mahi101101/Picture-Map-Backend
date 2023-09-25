@@ -1,9 +1,9 @@
 {
   "env": {
-    "DB_USER": "heroko_picture_map",
-    "DB_PASS": "heroko_picture_map1011",
-    "DB_NAME": "picture-map-prod",
-    "GOOGLE_API_KEY": "AIzaSyAsavc-jVDlFjjnFYBlpjE-Oi4PfW5ttwc",
-    "JWT_KEY": "do_trust_in_urself"
+    "DB_USER": "ADD YOUR HERUKO USERNAME",
+    "DB_PASS": "ADD YOUR HERUKO PASSWORD",
+    "DB_NAME": "ADD YOUR HERUKO DB NAME",
+    "GOOGLE_API_KEY": "ADD YOUR API KEY",
+    "JWT_KEY": "ADD YOUR TOKEN ENCRYPTION KEY TEXT"
   }
 }

@@ -63,31 +63,17 @@ const getPlacesByUserId = async (req, res, next) => {
 
 const getMapImg = async (req, res, next) => {
   let img;
-  const placeId = req.params.pid;
-  const setImgUrl = (a) => {
-    imgUrl = a;
+
+  const lng = req.query.lng;
+  const lat = req.query.lat;
+
+  const place = {
+    lat: lat,
+    lng: lng,
   };
-  let place;
-  try {
-    place = await Place.findById(placeId);
-  } catch (err) {
-    const error = new HttpError(
-      "Something went wrong, could not find a place.",
-      500
-    );
-    return next(error);
-  }
-
-  if (!place) {
-    const error = new HttpError(
-      "Could not find place for the provided id.",
-      404
-    );
-    return next(error);
-  }
 
   try {
-    const responseData = await captureMap(place.location);
+    const responseData = await captureMap(place);
     img = responseData.toString();
   } catch (error) {
     console.error("Error while capturing map:", error.message);

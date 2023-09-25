@@ -6,6 +6,7 @@ const HttpError = require("../models/http-error");
 const User = require("../models/user");
 
 const jwt_key = `${process.env.JWT_KEY}`;
+
 const getUsers = async (req, res, next) => {
   let users;
   try {
